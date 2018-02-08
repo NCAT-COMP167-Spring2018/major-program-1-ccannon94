@@ -15,19 +15,64 @@ Except for the GamerProfile and GamerProfileCollection classes, the toString met
 ### Handling ArrayLists
 
 Each ArrayList should have five associated methods to perform: getNum, add, get and set.  So if you have an ArrayList named widgets that stored items of type Widget, then the associated UML would be:
+
 `+getNumWidgets() : int  			//Return the number of items in the ArrayList widgets.`
+
 `+getWidget(index:int) : Widget  			//get the Widget at location index in ArrayList widgets`
+
 `+setWidget(index:int, item:Widget):void	//store item at location index in the ArrayList widgets.1`
+
 `+addWidget(item:Widget):void   		//Append the Widget to the ArrayList. `
+
 `+deleteWidget(index:int) : Widget 		//Remove and return the Widget at location index.`
 
 ### Input Files
 
 For testing purposes, the configuration and gamer data input files will be supplied to your main() method using command-line arguments/parameters.   One of your upcoming labs will cover how to use command-line arguments to pass information to your program.   See the included figures for the formats of these files.  Where needed, the data types of values are included with the value description using UML class diagram syntax.  You should look at the actual files to make sure that the format matches up with my description.
 
+#### Input File Format
+
+```
+0, pointsNeeded, rank0Name
+1, pointsNeeded, rank1Name
+...
+N, pointsNeeded, rankNName
+*
+engine sound file name
+explosion sound file name
+beep sound file name
+hyperspace sound file name
+shields critical warning sound file name
+minLevel0, maxLevel0, maxMeteorSpeed, numMeteors, backgroundImageFile
+minLevel1, maxLevel1, maxMeteorSpeed, numMeteors, backgroundImageFile
+minLevel2, maxLevel2, maxMeteorSpeed, numMeteors, backgroundImageFile
+...
+minLevelN, maxLevelN, maxMeteorsSpeed, numMeteors, backgroundImageFile
+*
+craftImageFile0, craftImageFile1, ..., craftImageFileN
+fire torpedo sounds file name
+thrustIncreaseAmt, thrustDecreaseAmt, maxSpeed
+meteor sprite sheet file name
+minMeteorSize, numMeteorCols, numMeteorRows
+defaultMaxMeteorSpeed
+craft explosion sprite sheet file name
+numExplosionCols, numExplosionRows
+```
+
 ### Gamer Data Output File
 
 The format of the output file is the same as the input file.  Your GamerProfile toString() method should match the format of the input file format.
+
+#### Gamer Data Output File Format
+```
+gamer0 firstname, gamer0 lastname, gamer0 gamerid
+gamer0Rank gamer0GamesPlayed gamer0TorpsFired gamer0MeteorsHit gamer0HighScore
+gamer1 firstname, gamer1 lastname, gamer1 gamerid
+gamer1Rank gamer1GamesPlayed gamer1TorpsFired gamer1MeteorsHit gamer1HighScore
+...
+gamerN firstname, gamerN lastname, gamerN gamerid
+gamerNRank gamerNGamesPlayed gamerNTorpsFired gamerNMeteorsHit
+```
 
 ### Grading
 
