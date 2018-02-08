@@ -14,6 +14,10 @@ Here are the UML Class Diagrams of the classes you must implement in Java.
 
 Except for the GamerProfile and GamerProfileCollection classes, the toString method of each class should just return a string with each property separated by a "|" character.  If the class has references to other objects as properties, start those properties on a new line (like we did for the MotorPool example in class).
 
+#### Mutator and Accessor Methods
+
+You **must** include the mutator and accessor methods for EVERY property in a class. For ArrayLists, see "Handling ArrayLists" in the next section.
+
 ### Handling ArrayLists
 
 Each ArrayList should have five associated methods to perform: getNum, add, get and set.  So if you have an ArrayList named widgets that stored items of type Widget, then the associated UML would be:
