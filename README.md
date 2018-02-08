@@ -4,6 +4,8 @@
 ### Introduction
 This program will require you to create classes to support a game similar to the classic title Asteroids.  Basically, the player controls a spacecraft that must destroy approaching meteors with torpedoes before they hit the spacecraft.  After all the meteors are destroyed, the player will progress to the next level where there will be more and potentially faster meteors.  This current assignment will require you to supply configuration and gamer profile data to the GUI portion of the game.
 
+![Figure01](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure1.png)
+
 ### UML Class Diagrams
 
 Here are the UML Class Diagrams of the classes you must implement in Java.
