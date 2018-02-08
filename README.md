@@ -122,3 +122,9 @@ Integrate your code with my GUI so that you can have fun playing the game.  I wi
 
 #### Extra Credit
 See me for extra credit opportunities after you get Level 5 complete.
+
+### Submission
+
+All assignments **MUST** be submitted using GitHub. Assignments will not be accepted in any other form. Failure to commit and/or push code is not an excuse for failing to submit. The following resources will help with using GitHub for this lab:
+ * [GitHub for Major Programs Video](https://www.youtube.com/watch?v=l2bP9JKQkdA)
+ * [GitHub for Major Programs Reference Sheet](https://gist.github.com/ccannon94/511115be821a873ae9ec5f4db9cfdda0)
