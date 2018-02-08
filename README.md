@@ -16,7 +16,28 @@ Except for the GamerProfile and GamerProfileCollection classes, the toString met
 
 #### Mutator and Accessor Methods
 
-You **must** include the mutator and accessor methods for EVERY property in a class. For ArrayLists, see "Handling ArrayLists" in the next section.
+You **must** include the mutator and accessor methods for EVERY property in a class, except the SoundData class. For ArrayLists, see "Handling ArrayLists" in the next section.
+
+![CraftData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure2.png)
+![ExplosionData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure3.png)
+![MeteorData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure4.png)
+![GamerProfile](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure5.png)
+![GamerProfileCollection](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure6.png)
+![MeteorIO](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure7.png)
+![MeteorConfigData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure8.png)
+![SoundData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure9.png)
+
+```
+public void setSoundResource( int index, String soundFile) {
+        URL soundResource = getClass().getResource(soundFile);
+        sounds[index] = new AudioClip(soundResource.toString());
+}
+```
+
+![Level](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure10.png)
+![LevelData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure11.png)
+![Rank](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure12.png)
+![RankData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure13.png)
 
 ### Handling ArrayLists
 
