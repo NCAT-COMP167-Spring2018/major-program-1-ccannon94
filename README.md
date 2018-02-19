@@ -22,11 +22,13 @@ Except for the GamerProfile and GamerProfileCollection classes, the toString met
 You **must** include the mutator and accessor methods for EVERY property in a class, except the SoundData class. For ArrayLists, see "Handling ArrayLists" in the next section.
 
 ![CraftData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure2.png)
+**Note:** "phaserSouldFile" should read "phaserSoundFile"
 ![ExplosionData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure3.png)
 ![MeteorData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure4.png)
 ![GamerProfile](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure5.png)
 ![GamerProfileCollection](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure6.png)
 ![MeteorIO](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure7.png)
+**Note:** `writeGamerProfileData(GamerProfileCollection gpCollection) : void` is the proper method signature for "writeGamerProfileCollect"
 ![MeteorConfigData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure8.png)
 ![SoundData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure9.png)
 
@@ -96,12 +98,12 @@ The format of the output file is the same as the input file.  Your GamerProfile 
 #### Gamer Data Output File Format
 ```
 gamer0 firstname, gamer0 lastname, gamer0 gamerid
-gamer0Rank gamer0GamesPlayed gamer0TorpsFired gamer0MeteorsHit gamer0HighScore
+gamer0Rank gamer0GamesPlayed gamer0TorpsFired gamer0MeteorsHit gamer0HighScore gamer0TotalScore
 gamer1 firstname, gamer1 lastname, gamer1 gamerid
-gamer1Rank gamer1GamesPlayed gamer1TorpsFired gamer1MeteorsHit gamer1HighScore
+gamer1Rank gamer1GamesPlayed gamer1TorpsFired gamer1MeteorsHit gamer1HighScore gamer0TotalScore
 ...
 gamerN firstname, gamerN lastname, gamerN gamerid
-gamerNRank gamerNGamesPlayed gamerNTorpsFired gamerNMeteorsHit
+gamerNRank gamerNGamesPlayed gamerNTorpsFired gamerNMeteorsHit gamerNHighScore gamerNHighScore
 ```
 
 ### Grading
