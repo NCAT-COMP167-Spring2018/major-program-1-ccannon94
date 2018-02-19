@@ -10,3 +10,6 @@ The phaserSoundFile property was misspelled
 * MeteorIO
 Change the parameter from a filename to the GamerProfileCollection object.
 +writeGamerProfileData( GamerProfileCollection gpCollection ) : void
+
+* GamerProfile
+GamerID should be of type String
