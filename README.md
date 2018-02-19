@@ -26,6 +26,7 @@ You **must** include the mutator and accessor methods for EVERY property in a cl
 ![ExplosionData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure3.png)
 ![MeteorData](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure4.png)
 ![GamerProfile](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure5.png)
+**Note:** `gamerID` should be a STRING
 ![GamerProfileCollection](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure6.png)
 ![MeteorIO](https://github.com/NCATCS/images/blob/master/Spring2018MP1_Figure7.png)
 **Note:** `writeGamerProfileData(GamerProfileCollection gpCollection) : void` is the proper method signature for "writeGamerProfileCollect"
