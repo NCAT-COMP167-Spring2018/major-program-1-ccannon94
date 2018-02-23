@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MeteorBlasterDriver.jnlp">
+  <information>
+    <title>MeteorBlasterDriver</title>
+    <vendor>kelvin</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MeteorBlasterDriver.jar" size="1611" download="eager" />
+    <jar href="lib\MeteorBlasterBackend.jar" size="767311" download="eager" />
+    <jar href="lib\MeteorBlasterGUI2.jar" size="61994" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="MeteorBlasterDriver" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="meteorblasterdriver.MeteorBlasterDriver"  name="MeteorBlasterDriver" >
+    <fx:argument>config/gameData.txt</fx:argument>
+    <fx:argument>config/meteorBlasterConfig.txt</fx:argument>
+  </jfx:javafx-desc>
+  <update check="always"/>
+</jnlp>
