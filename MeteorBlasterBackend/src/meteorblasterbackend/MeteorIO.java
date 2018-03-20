@@ -7,6 +7,7 @@ package meteorblasterbackend;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -38,5 +39,15 @@ public class MeteorIO {
         }
         
         return gpc;
+    }
+    
+    public static void writeGamerProfileData(GamerProfileCollection gpCollection) {
+        try {
+            PrintWriter pw = new PrintWriter(new File(gpCollection.getFilename()));
+            pw.write(gpCollection.toString());
+            pw.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(MeteorIO.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
