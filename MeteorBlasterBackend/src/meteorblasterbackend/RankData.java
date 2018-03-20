@@ -37,4 +37,12 @@ public class RankData {
     public Rank deleteRank(int index) {
         return ranks.remove(index);
     }
+    
+    public String toString() {
+        String output = "";
+        for(Rank rank : ranks) {
+            output += rank.toString() + System.lineSeparator();
+        }
+        return output;
+    }
 }
