@@ -73,4 +73,24 @@ public class CraftData {
     public void setMaxSpeed(double maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
+    
+    public int getNumImageFiles() {
+        return imageFiles.size();
+    }
+    
+    public void addImageFile(String imageFile) {
+        imageFiles.add(imageFile);
+    }
+    
+    public void setImageFile(int index, String imageFile) {
+        imageFiles.set(index, imageFile);
+    }
+    
+    public String getImageFile(int index) {
+        return imageFiles.get(index);
+    }
+    
+    public String deleteImageFile(int index) {
+        return imageFiles.remove(index);
+    }
 }
