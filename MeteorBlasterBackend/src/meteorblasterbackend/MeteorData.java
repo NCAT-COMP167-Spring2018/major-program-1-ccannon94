@@ -91,4 +91,8 @@ public class MeteorData {
     public void setMaxSpeed(double maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
+    
+    public String toString() {
+        return meteorSpriteFile + System.lineSeparator() + minSize + ", " + meteorCols + ", " + meteorRows + System.lineSeparator() + maxSpeed;
+    }
 }
