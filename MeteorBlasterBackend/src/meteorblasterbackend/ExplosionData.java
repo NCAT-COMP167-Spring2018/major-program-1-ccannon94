@@ -14,7 +14,10 @@ public class ExplosionData {
     private int explosionRows;
     private int explosionCols;
 
-    
+    public ExplosionData() {
+        explosionSpriteFile = "";
+        explosionRows = explosionCols = 0;
+    }
     
     /**
      * @return the explosionSpriteFile
