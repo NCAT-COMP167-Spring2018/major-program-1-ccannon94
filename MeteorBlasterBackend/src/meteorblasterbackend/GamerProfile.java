@@ -20,6 +20,23 @@ public class GamerProfile {
     private int highScore; 
     private int totalScore;
 
+    public GamerProfile() {
+        firstName = lastName = "";
+        gamerId = gamerRank = gamesPlayed = torpedoesFired = meteorsHit = highScore = totalScore = 0;
+    }
+    
+    public GamerProfile(String firstName, String lastName, int gamerId, int gamerRank, int gamesPlayed, int torpedoesFired, int meteorsHit, int highScore, int totalScore) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gamerId = gamerId;
+        this.gamerRank = gamerRank;
+        this.gamesPlayed = gamesPlayed;
+        this.torpedoesFired = torpedoesFired;
+        this.meteorsHit = meteorsHit;
+        this.highScore = highScore;
+        this.totalScore = totalScore;
+    }
+    
     /**
      * @return the firstName
      */
@@ -144,5 +161,9 @@ public class GamerProfile {
      */
     public void setTotalScore(int totalScore) {
         this.totalScore = totalScore;
+    }
+    
+    public String toString(){
+        return firstName + ", " + lastName + ", " + gamerId + System.lineSeparator() + gamerRank + " " + gamesPlayed + " " + torpedoesFired + " " + meteorsHit + " " + highScore + " " + totalScore;
     }
 }
