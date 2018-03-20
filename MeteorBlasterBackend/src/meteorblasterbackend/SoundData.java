@@ -36,4 +36,12 @@ public class SoundData {
     public AudioClip getSound(int index) {
         return sounds[index];
     }
+    
+    public String toString() {
+        String output = "";
+        for(AudioClip clip : sounds) {
+            output += clip.getSource() + System.lineSeparator();
+        }
+        return output;
+    }
 }
