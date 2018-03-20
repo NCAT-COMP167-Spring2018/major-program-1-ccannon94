@@ -37,4 +37,12 @@ public class LevelData {
     public Level deleteLevel(int index) {
         return levels.remove(index);
     }
+    
+    public String toString() {
+        String output = "";
+        for(Level level : levels){
+            output += level.toString() + System.lineSeparator();
+        }
+        return output;
+    }
 }
