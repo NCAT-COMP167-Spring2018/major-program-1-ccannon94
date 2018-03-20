@@ -99,4 +99,18 @@ public class CraftData {
     public String deleteImageFile(int index) {
         return imageFiles.remove(index);
     }
+    
+    public String toString() {
+        String output = "";
+        
+        for(int i = 0; i < imageFiles.size(); i ++) {
+            output += imageFiles.get(i);
+            if(i < (imageFiles.size() - 1))
+                output += ", ";
+        }
+        
+        output += System.lineSeparator() + phaserSoundFile + System.lineSeparator() + thrustIncreaseAmount + ", " + thrustDecreaseAmount + ", " + maxSpeed;
+        
+        return output;
+    }
 }
