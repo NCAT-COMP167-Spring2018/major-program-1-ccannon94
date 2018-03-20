@@ -26,7 +26,7 @@ public class MeteorIO {
             while (reader.hasNext()) {
                 String[] gamerLine1 = reader.nextLine().split(",");
                 String[] gamerLine2 = reader.nextLine().split(" ");
-                GamerProfile newProfile = new GamerProfile(gamerLine1[0], gamerLine1[1], Integer.parseInt(gamerLine1[2]), Integer.parseInt(gamerLine2[0]), Integer.parseInt(gamerLine2[1]), Integer.parseInt(gamerLine2[2]), Integer.parseInt(gamerLine2[3]), Integer.parseInt(gamerLine2[4]), Integer.parseInt(gamerLine2[5]));
+                GamerProfile newProfile = new GamerProfile(gamerLine1[0], gamerLine1[1], gamerLine1[2], Integer.parseInt(gamerLine2[0]), Integer.parseInt(gamerLine2[1]), Integer.parseInt(gamerLine2[2]), Integer.parseInt(gamerLine2[3]), Integer.parseInt(gamerLine2[4]), Integer.parseInt(gamerLine2[5]));
                 gpc.addGamerProfile(newProfile);
                 
                 if(newProfile.getHighScore() > gpc.getHighGameProfile().getHighScore())

@@ -12,7 +12,7 @@ package meteorblasterbackend;
 public class GamerProfile {
     private String firstName;
     private String lastName;
-    private int gamerId;
+    private String gamerId;
     private int gamerRank;
     private int gamesPlayed;
     private int torpedoesFired;
@@ -21,11 +21,11 @@ public class GamerProfile {
     private int totalScore;
 
     public GamerProfile() {
-        firstName = lastName = "";
-        gamerId = gamerRank = gamesPlayed = torpedoesFired = meteorsHit = highScore = totalScore = 0;
+        firstName = lastName = gamerId = "";
+        gamerRank = gamesPlayed = torpedoesFired = meteorsHit = highScore = totalScore = 0;
     }
     
-    public GamerProfile(String firstName, String lastName, int gamerId, int gamerRank, int gamesPlayed, int torpedoesFired, int meteorsHit, int highScore, int totalScore) {
+    public GamerProfile(String firstName, String lastName, String gamerId, int gamerRank, int gamesPlayed, int torpedoesFired, int meteorsHit, int highScore, int totalScore) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gamerId = gamerId;
@@ -68,14 +68,14 @@ public class GamerProfile {
     /**
      * @return the gamerId
      */
-    public int getGamerId() {
+    public String getGamerId() {
         return gamerId;
     }
 
     /**
      * @param gamerId the gamerId to set
      */
-    public void setGamerId(int gamerId) {
+    public void setGamerId(String gamerId) {
         this.gamerId = gamerId;
     }
 
