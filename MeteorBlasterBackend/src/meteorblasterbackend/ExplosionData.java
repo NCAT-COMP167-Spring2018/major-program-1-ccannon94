@@ -60,4 +60,8 @@ public class ExplosionData {
     public void setExplosionCols(int explosionCols) {
         this.explosionCols = explosionCols;
     }
+    
+    public String toString() {
+        return explosionSpriteFile + System.lineSeparator() + explosionCols + ", " + explosionRows;
+    }
 }
