@@ -14,6 +14,10 @@ import java.util.ArrayList;
 public class RankData {
     private ArrayList<Rank> ranks;
     
+    public RankData() {
+        ranks = new ArrayList<>();
+    }
+    
     public int getNumRanks() {
         return ranks.size();
     }
