@@ -99,4 +99,8 @@ public class Level {
     public void setLevelBackgroundImage(String levelBackgroundImage) {
         this.levelBackgroundImage = levelBackgroundImage;
     }
+    
+    public String toString() {
+        return levelRangeMin + ", " + levelRangeMax + ", " + maxMeteorSpeed + ", " + numMeteors + ", " + levelBackgroundImage;
+    }
 }
