@@ -60,4 +60,8 @@ public class Rank {
     public void setPointsNeeded(int pointsNeeded) {
         this.pointsNeeded = pointsNeeded;
     }
+    
+    public String toString() {
+        return rankId + ", " + pointsNeeded + ", " + rankName;
+    }
 }
