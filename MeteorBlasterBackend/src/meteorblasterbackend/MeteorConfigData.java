@@ -17,6 +17,15 @@ public class MeteorConfigData {
     private SoundData soundData;
     private LevelData levelData;
 
+    public MeteorConfigData() {
+        craftData = new CraftData();
+        meteorData = new MeteorData();
+        explosionData = new ExplosionData();
+        rankData = new RankData();
+        soundData = new SoundData();
+        levelData = new LevelData();
+    }
+    
     /**
      * @return the craftData
      */
