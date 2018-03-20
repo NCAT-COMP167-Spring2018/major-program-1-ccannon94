@@ -20,6 +20,10 @@ public class SoundData {
     public final int TRANSPORTER_CLIP_NUM = 3;
     public final int SHIELDS_CRITICAL_CLIP_NUM = 4;
     
+    public SoundData() {
+        sounds = new AudioClip[5];
+    }
+    
     public void setSoundResource(int index, String soundFile) {
         URL soundResource = getClass().getResource(soundFile);
         sounds[index] = new AudioClip(soundResource.toString());
