@@ -109,4 +109,8 @@ public class MeteorConfigData {
     public void setLevelData(LevelData levelData) {
         this.levelData = levelData;
     }
+    
+    public String toString() {
+        return rankData.toString() + "*" + System.lineSeparator() + soundData.toString() + levelData.toString() + "*" + System.lineSeparator() + craftData.toString() + System.lineSeparator() + meteorData.toString() + System.lineSeparator() + explosionData.toString();
+    }
 }
