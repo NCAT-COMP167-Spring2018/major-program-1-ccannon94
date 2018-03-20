@@ -1,6 +1,10 @@
-Johnny, Quest, BeastMode
+Johnny,  Quest,  BeastMode
 4 6 173 90 3550 12500
-Jack, Frack, LeanMean
+Jack,  Frack,  LeanMean
 2 3 98 55 1200 2760
-Donna, Blaire, D-Girl
+Donna,  Blaire,  D-Girl
 5 11 475 169 3278 15009
+Bob, Saget, PapaTanner
+4 14 323 52 1600 143413
+Chris, Cannon, TheTA
+2 3 6 7 67 346
