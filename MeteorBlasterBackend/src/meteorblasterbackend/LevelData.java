@@ -17,4 +17,24 @@ public class LevelData {
     public LevelData() {
         levels = new ArrayList<>();
     }
+    
+    public void addLevel(Level level) {
+        levels.add(level);
+    }
+    
+    public int getNumLevels() {
+        return levels.size();
+    }
+    
+    public void setLevel(int index, Level level) {
+        levels.set(index, level);
+    }
+    
+    public Level getLevel(int index) {
+        return levels.get(index);
+    }
+    
+    public Level deleteLevel(int index) {
+        return levels.remove(index);
+    }
 }
