@@ -16,6 +16,12 @@ public class MeteorData {
     private int meteorRows;
     private double maxSpeed;
 
+    public MeteorData() {
+        meteorSpriteFile = "";
+        minSize = meteorCols = meteorRows = 0;
+        maxSpeed = 0.0;
+    }
+    
     /**
      * @return the meteorSpriteFile
      */
