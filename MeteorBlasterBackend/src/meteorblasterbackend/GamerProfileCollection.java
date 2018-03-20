@@ -17,6 +17,19 @@ public class GamerProfileCollection {
     private GamerProfile highGameProfile;
     private ArrayList<GamerProfile> gamerProfiles;
 
+    public GamerProfileCollection() {
+        filename = "";
+        selectedProfile = highGameProfile = new GamerProfile();
+        gamerProfiles = new ArrayList<>();
+    }
+    
+    public GamerProfileCollection(String filename, GamerProfile selectedProfile, GamerProfile highGameProfile) {
+        super();
+        this.filename = filename;
+        this.selectedProfile = selectedProfile;
+        this.highGameProfile = highGameProfile;
+    }
+    
     /**
      * @return the filename
      */
