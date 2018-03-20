@@ -14,6 +14,11 @@ public class Rank {
     private String rankName;
     private int pointsNeeded;
 
+    public Rank() {
+        rankId = pointsNeeded = 0;
+        rankName = "";
+    }
+    
     /**
      * @return the rankId
      */
