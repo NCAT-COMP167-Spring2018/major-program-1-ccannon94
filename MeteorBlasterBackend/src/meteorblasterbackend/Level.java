@@ -16,6 +16,20 @@ public class Level {
     private double maxMeteorSpeed;
     private String levelBackgroundImage;
 
+    public Level() {
+        levelRangeMin = levelRangeMax = numMeteors = 0;
+        maxMeteorSpeed = 0.0;
+        levelBackgroundImage = "";
+    }
+    
+    public Level(int levelRangeMin, int levelRangeMax, double maxMeteorSpeed, int numMeteors, String levelBackgroundImage){
+        this.levelRangeMin = levelRangeMin;
+        this.levelRangeMax = levelRangeMax;
+        this.numMeteors = numMeteors;
+        this.maxMeteorSpeed = maxMeteorSpeed;
+        this.levelBackgroundImage = levelBackgroundImage;
+    }
+    
     /**
      * @return the levelRangeMin
      */
