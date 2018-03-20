@@ -10,5 +10,139 @@ package meteorblasterbackend;
  * @author CCannon
  */
 public class GamerProfile {
-    
+    private String firstName;
+    private String lastName;
+    private int gamerId;
+    private int gamerRank;
+    private int gamesPlayed;
+    private int torpedoesFired;
+    private int meteorsHit;
+    private int highScore; 
+    private int totalScore;
+
+    /**
+     * @return the firstName
+     */
+    public String getFirstName() {
+        return firstName;
+    }
+
+    /**
+     * @param firstName the firstName to set
+     */
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    /**
+     * @return the lastName
+     */
+    public String getLastName() {
+        return lastName;
+    }
+
+    /**
+     * @param lastName the lastName to set
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    /**
+     * @return the gamerId
+     */
+    public int getGamerId() {
+        return gamerId;
+    }
+
+    /**
+     * @param gamerId the gamerId to set
+     */
+    public void setGamerId(int gamerId) {
+        this.gamerId = gamerId;
+    }
+
+    /**
+     * @return the gamerRank
+     */
+    public int getGamerRank() {
+        return gamerRank;
+    }
+
+    /**
+     * @param gamerRank the gamerRank to set
+     */
+    public void setGamerRank(int gamerRank) {
+        this.gamerRank = gamerRank;
+    }
+
+    /**
+     * @return the gamesPlayed
+     */
+    public int getGamesPlayed() {
+        return gamesPlayed;
+    }
+
+    /**
+     * @param gamesPlayed the gamesPlayed to set
+     */
+    public void setGamesPlayed(int gamesPlayed) {
+        this.gamesPlayed = gamesPlayed;
+    }
+
+    /**
+     * @return the torpedoesFired
+     */
+    public int getTorpedoesFired() {
+        return torpedoesFired;
+    }
+
+    /**
+     * @param torpedoesFired the torpedoesFired to set
+     */
+    public void setTorpedoesFired(int torpedoesFired) {
+        this.torpedoesFired = torpedoesFired;
+    }
+
+    /**
+     * @return the meteorsHit
+     */
+    public int getMeteorsHit() {
+        return meteorsHit;
+    }
+
+    /**
+     * @param meteorsHit the meteorsHit to set
+     */
+    public void setMeteorsHit(int meteorsHit) {
+        this.meteorsHit = meteorsHit;
+    }
+
+    /**
+     * @return the highScore
+     */
+    public int getHighScore() {
+        return highScore;
+    }
+
+    /**
+     * @param highScore the highScore to set
+     */
+    public void setHighScore(int highScore) {
+        this.highScore = highScore;
+    }
+
+    /**
+     * @return the totalScore
+     */
+    public int getTotalScore() {
+        return totalScore;
+    }
+
+    /**
+     * @param totalScore the totalScore to set
+     */
+    public void setTotalScore(int totalScore) {
+        this.totalScore = totalScore;
+    }
 }
