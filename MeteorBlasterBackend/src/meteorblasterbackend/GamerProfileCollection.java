@@ -91,4 +91,12 @@ public class GamerProfileCollection {
     public GamerProfile deleteGamerProfile(int index) {
         return gamerProfiles.remove(index);
     }
+    
+    public String toString() {
+        String output = "";
+        for(GamerProfile profile : gamerProfiles) {
+            output += profile.toString() + System.lineSeparator();
+        }
+        return output;
+    }
 }
