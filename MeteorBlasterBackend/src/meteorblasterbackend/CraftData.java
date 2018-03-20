@@ -18,6 +18,12 @@ public class CraftData {
     private double thrustDecreaseAmount;
     private double maxSpeed;
 
+    public CraftData() {
+        imageFiles = new ArrayList<>();
+        phaserSoundFile = "";
+        thrustIncreaseAmount = thrustDecreaseAmount = maxSpeed = 0.0;
+    }
+    
     /**
      * @return the phaserSoundFile
      */
