@@ -24,7 +24,7 @@ public class GamerProfileCollection {
     }
     
     public GamerProfileCollection(String filename, GamerProfile selectedProfile, GamerProfile highGameProfile) {
-        super();
+        this();
         this.filename = filename;
         this.selectedProfile = selectedProfile;
         this.highGameProfile = highGameProfile;
