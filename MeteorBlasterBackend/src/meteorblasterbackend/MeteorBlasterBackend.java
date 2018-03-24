@@ -24,6 +24,23 @@ public class MeteorBlasterBackend {
         testCollection.addGamerProfile(testGamer2);
         
         MeteorIO.writeGamerProfileData(testCollection);
+        
+        CraftData testCraft = new CraftData();
+        MeteorData testMeteor = new MeteorData();
+        ExplosionData testExplosion = new ExplosionData();
+        RankData testRank = new RankData();
+        SoundData testSound = new SoundData();
+        LevelData testLevel = new LevelData();
+        
+        MeteorConfigData testConfigData = new MeteorConfigData();
+        testConfigData.setCraftData(testCraft);
+        testConfigData.setMeteorData(testMeteor);
+        testConfigData.setExplosionData(testExplosion);
+        testConfigData.setRankData(testRank);
+        testConfigData.setSoundData(testSound);
+        testConfigData.setLevelData(testLevel);
+        
+        System.out.println(testConfigData.toString());
     }
     
 }
