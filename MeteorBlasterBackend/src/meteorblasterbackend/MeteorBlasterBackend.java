@@ -41,6 +41,10 @@ public class MeteorBlasterBackend {
         testConfigData.setLevelData(testLevel);
         
         System.out.println(testConfigData.toString());
+        
+        MeteorConfigData testConfigData2 = MeteorIO.readConfigData(args[1]);
+        
+        System.out.println(testConfigData2.toString());
     }
     
 }
