@@ -23,7 +23,7 @@ resources/shieldsfailing.mp3
 *
 images/craft0.png  ,images/craft1.png    ,   images/craft2.png
 resources/fireTorpedo.mp3
-0.25 0.05    5.0
+0.25 0.05 5.0
 images/astroidsheet2.png
 30 4 4 6.0
 images/explosion.png

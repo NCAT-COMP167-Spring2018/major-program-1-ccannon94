@@ -86,8 +86,9 @@ public class MeteorIO {
             
             Rank newRank = new Rank();
             newRank.setRankId(Integer.parseInt(rankLine[0].trim()));
-            newRank.setPointsNeeded(Integer.parseInt(rankLine[1].trim()));
-            newRank.setRankName(rankLine[2].trim());
+            newRank.setRankName(rankLine[1].trim());
+            newRank.setPointsNeeded(Integer.parseInt(rankLine[2].trim()));
+            
             
             newRankData.addRank(newRank);
         }
@@ -127,7 +128,7 @@ public class MeteorIO {
             newCraftData.addImageFile(imageFiles[i].trim());
         }
         newCraftData.setPhaserSoundFile(reader.nextLine());
-        String[] craftValues = reader.nextLine().split(",");
+        String[] craftValues = reader.nextLine().split(" ");
         newCraftData.setThrustIncreaseAmount(Double.parseDouble(craftValues[0].trim()));
         newCraftData.setThrustDecreaseAmount(Double.parseDouble(craftValues[1].trim()));
         newCraftData.setMaxSpeed(Double.parseDouble(craftValues[2].trim()));
@@ -139,11 +140,11 @@ public class MeteorIO {
         MeteorData newMeteorData = new MeteorData();
         
         newMeteorData.setMeteorSpriteFile(reader.nextLine());
-        String[] meteorValues = reader.nextLine().split(",");
+        String[] meteorValues = reader.nextLine().split(" ");
         newMeteorData.setMinSize(Integer.parseInt(meteorValues[0].trim()));
         newMeteorData.setMeteorCols(Integer.parseInt(meteorValues[1].trim()));
         newMeteorData.setMeteorRows(Integer.parseInt(meteorValues[2].trim()));
-        newMeteorData.setMaxSpeed(Double.parseDouble(reader.nextLine().trim()));
+        newMeteorData.setMaxSpeed(Double.parseDouble(meteorValues[3].trim()));
         
         return newMeteorData;
     }
@@ -153,7 +154,7 @@ public class MeteorIO {
         
         newExplosionData.setExplosionSpriteFile(reader.nextLine());
         
-        String[] explosionValues = reader.nextLine().split(",");
+        String[] explosionValues = reader.nextLine().split(" ");
         newExplosionData.setExplosionCols(Integer.parseInt(explosionValues[0].trim()));
         newExplosionData.setExplosionRows(Integer.parseInt(explosionValues[1].trim()));
         
