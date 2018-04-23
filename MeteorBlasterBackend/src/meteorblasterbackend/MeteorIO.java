@@ -129,9 +129,37 @@ public class MeteorIO {
         }
         newCraftData.setPhaserSoundFile(reader.nextLine());
         String[] craftValues = reader.nextLine().split(" ");
-        newCraftData.setThrustIncreaseAmount(Double.parseDouble(craftValues[0].trim()));
-        newCraftData.setThrustDecreaseAmount(Double.parseDouble(craftValues[1].trim()));
-        newCraftData.setMaxSpeed(Double.parseDouble(craftValues[2].trim()));
+        int currentIndex = 0;
+        for(int i = 0; i < craftValues.length; i++) {
+            if(craftValues[i].trim().equals("")) {
+                System.out.println("Skipping a line");
+            }
+            else {
+                newCraftData.setThrustIncreaseAmount(Double.parseDouble(craftValues[i].trim()));
+                currentIndex = i;
+                break;
+            }
+        }
+        for(int j = 0; j < craftValues.length; j++) {
+            if(craftValues[j].trim().equals("")) {
+                System.out.println("Skipping a line");
+            }
+            else {
+                newCraftData.setThrustDecreaseAmount(Double.parseDouble(craftValues[j].trim()));
+                currentIndex = j;
+                break;
+            }
+        }
+        for(int k = 0; k < craftValues.length; k++) {
+            if(craftValues[k].trim().equals("")) {
+                System.out.println("Skipping a line");
+            }
+            else {
+                newCraftData.setMaxSpeed(Double.parseDouble(craftValues[k].trim()));
+                currentIndex = k;
+                break;
+            }
+        }
         
         return newCraftData;
     }
@@ -141,10 +169,47 @@ public class MeteorIO {
         
         newMeteorData.setMeteorSpriteFile(reader.nextLine());
         String[] meteorValues = reader.nextLine().split(" ");
-        newMeteorData.setMinSize(Integer.parseInt(meteorValues[0].trim()));
-        newMeteorData.setMeteorCols(Integer.parseInt(meteorValues[1].trim()));
-        newMeteorData.setMeteorRows(Integer.parseInt(meteorValues[2].trim()));
-        newMeteorData.setMaxSpeed(Double.parseDouble(meteorValues[3].trim()));
+        int currentIndex = 0;
+        for(int i = 0; i < meteorValues.length; i++) {
+            if(meteorValues[i].trim().equals("")) {
+                System.out.println("Skipping a line");
+            }
+            else {
+                newMeteorData.setMinSize(Integer.parseInt(meteorValues[i].trim()));
+                currentIndex = i;
+                break;
+            }
+        }
+        for(int j = currentIndex; j < meteorValues.length; j++) {
+            if(meteorValues[j].trim().equals("")) {
+                System.out.println("Skipping a line");
+            }
+            else {
+                newMeteorData.setMeteorCols(Integer.parseInt(meteorValues[j].trim()));
+                currentIndex = j;
+                break;
+            }
+        }
+        for(int k = currentIndex; k < meteorValues.length; k++) {
+            if(meteorValues[k].trim().equals("")) {
+                System.out.println("Skipping a line");
+            }
+            else {
+                newMeteorData.setMeteorRows(Integer.parseInt(meteorValues[k].trim()));
+                currentIndex = k;
+                break;
+            }
+        }
+        for(int l = currentIndex; l < meteorValues.length; l++) {
+            if(meteorValues[l].trim().equals("")) {
+                System.out.println("Skipping a line");
+            }
+            else {
+                newMeteorData.setMaxSpeed(Double.parseDouble(meteorValues[l].trim()));
+                currentIndex = l;
+                break;
+            }
+        }
         
         return newMeteorData;
     }
@@ -155,8 +220,27 @@ public class MeteorIO {
         newExplosionData.setExplosionSpriteFile(reader.nextLine());
         
         String[] explosionValues = reader.nextLine().split(" ");
-        newExplosionData.setExplosionCols(Integer.parseInt(explosionValues[0].trim()));
-        newExplosionData.setExplosionRows(Integer.parseInt(explosionValues[1].trim()));
+        int currentIndex = 0;
+        for(int i = 0; i < explosionValues.length; i++) {
+            if(explosionValues[i].trim().equals("")) {
+                System.out.println("Skipping a line");
+            }
+            else {
+                newExplosionData.setExplosionCols(Integer.parseInt(explosionValues[i].trim()));
+                currentIndex = i;
+                break;
+            }
+        }
+        for(int j = 0; j < explosionValues.length; j++) {
+            if(explosionValues[j].trim().equals("")) {
+                System.out.println("Skipping a line");
+            }
+            else {
+                newExplosionData.setExplosionRows(Integer.parseInt(explosionValues[j].trim()));
+                currentIndex = j;
+                break;
+            }
+        }
         
         return newExplosionData;
     }
