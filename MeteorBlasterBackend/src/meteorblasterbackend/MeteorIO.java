@@ -20,28 +20,28 @@ import javafx.scene.media.AudioClip;
 public class MeteorIO {
     public static GamerProfileCollection readGamerProfileData(String gamerDataFile) {
         GamerProfileCollection gpc = new GamerProfileCollection(gamerDataFile, new GamerProfile(), new GamerProfile());
-        
+
         try {
             Scanner reader = new Scanner(new File(gamerDataFile));
-            
+
             while (reader.hasNext()) {
                 String[] gamerLine1 = reader.nextLine().split(",");
                 String[] gamerLine2 = reader.nextLine().split(" ");
                 GamerProfile newProfile = new GamerProfile(gamerLine1[0], gamerLine1[1], gamerLine1[2], Integer.parseInt(gamerLine2[0]), Integer.parseInt(gamerLine2[1]), Integer.parseInt(gamerLine2[2]), Integer.parseInt(gamerLine2[3]), Integer.parseInt(gamerLine2[4]), Integer.parseInt(gamerLine2[5]));
                 gpc.addGamerProfile(newProfile);
-                
+
                 if(newProfile.getHighScore() > gpc.getHighGameProfile().getHighScore())
                     gpc.setHighGameProfile(newProfile);
-                
+
                 gpc.setSelectedProfile(newProfile);
             }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(MeteorIO.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         return gpc;
     }
-    
+
     public static void writeGamerProfileData(GamerProfileCollection gpCollection) {
         try {
             PrintWriter pw = new PrintWriter(new File(gpCollection.getFilename()));
@@ -51,13 +51,13 @@ public class MeteorIO {
             Logger.getLogger(MeteorIO.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
     public static MeteorConfigData readConfigData(String gamerDataFile) {
         MeteorConfigData newConfigData = new MeteorConfigData();
-        
+
         try {
             Scanner reader = new Scanner(new File(gamerDataFile));
-            
+
             RankData newRankData = readRankData(reader);
             newConfigData.setRankData(newRankData);
             SoundData newSoundData = readSoundData(reader);
@@ -73,56 +73,56 @@ public class MeteorIO {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(MeteorIO.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         return newConfigData;
     }
-    
+
     public static RankData readRankData(Scanner reader){
         RankData newRankData = new RankData();
         while(reader.hasNext()) {
             String[] rankLine = reader.nextLine().split(",");
-            
+
             if (rankLine[0].trim().equals("*")) break;
-            
+
             Rank newRank = new Rank();
             newRank.setRankId(Integer.parseInt(rankLine[0].trim()));
             newRank.setRankName(rankLine[1].trim());
             newRank.setPointsNeeded(Integer.parseInt(rankLine[2].trim()));
-            
-            
+
+
             newRankData.addRank(newRank);
         }
         return newRankData;
     }
-    
+
     public static SoundData readSoundData(Scanner reader) {
         SoundData newSoundData = new SoundData();
-        
+
         for(int i = 0; i < 5; i++) {
             newSoundData.setSoundResource(i, reader.nextLine());
         }
-        
+
         return newSoundData;
     }
-    
+
     public static LevelData readLevelData(Scanner reader) {
         LevelData newLevelData = new LevelData();
-        
+
         while(reader.hasNext()) {
             String[] nextLine = reader.nextLine().split(",");
-            
+
             if(nextLine[0].trim().equals("*")) break;
-            
+
             meteorblasterbackend.Level newLevel = new meteorblasterbackend.Level(Integer.parseInt(nextLine[0].trim()), Integer.parseInt(nextLine[1].trim()), Double.parseDouble(nextLine[2].trim()), Integer.parseInt(nextLine[3].trim()), nextLine[4].trim());
             newLevelData.addLevel(newLevel);
         }
-        
+
         return newLevelData;
     }
-    
+
     public static CraftData readCraftData(Scanner reader) {
         CraftData newCraftData = new CraftData();
-        
+
         String[] imageFiles = reader.nextLine().split(",");
         for(int i = 0; i < imageFiles.length; i++){
             newCraftData.addImageFile(imageFiles[i].trim());
@@ -140,7 +140,7 @@ public class MeteorIO {
                 break;
             }
         }
-        for(int j = 0; j < craftValues.length; j++) {
+        for(int j = currentIndex; j < craftValues.length; j++) {
             if(craftValues[j].trim().equals("")) {
                 System.out.println("Skipping a line");
             }
@@ -150,7 +150,7 @@ public class MeteorIO {
                 break;
             }
         }
-        for(int k = 0; k < craftValues.length; k++) {
+        for(int k = currentIndex; k < craftValues.length; k++) {
             if(craftValues[k].trim().equals("")) {
                 System.out.println("Skipping a line");
             }
@@ -160,13 +160,13 @@ public class MeteorIO {
                 break;
             }
         }
-        
+
         return newCraftData;
     }
-    
+
     public static MeteorData readMeteorData(Scanner reader) {
         MeteorData newMeteorData = new MeteorData();
-        
+
         newMeteorData.setMeteorSpriteFile(reader.nextLine());
         String[] meteorValues = reader.nextLine().split(" ");
         int currentIndex = 0;
@@ -210,15 +210,15 @@ public class MeteorIO {
                 break;
             }
         }
-        
+
         return newMeteorData;
     }
-    
+
     public static ExplosionData readExplosionData(Scanner reader) {
         ExplosionData newExplosionData = new ExplosionData();
-        
+
         newExplosionData.setExplosionSpriteFile(reader.nextLine());
-        
+
         String[] explosionValues = reader.nextLine().split(" ");
         int currentIndex = 0;
         for(int i = 0; i < explosionValues.length; i++) {
@@ -231,7 +231,7 @@ public class MeteorIO {
                 break;
             }
         }
-        for(int j = 0; j < explosionValues.length; j++) {
+        for(int j = currentIndex; j < explosionValues.length; j++) {
             if(explosionValues[j].trim().equals("")) {
                 System.out.println("Skipping a line");
             }
@@ -241,7 +241,7 @@ public class MeteorIO {
                 break;
             }
         }
-        
+
         return newExplosionData;
     }
 }
